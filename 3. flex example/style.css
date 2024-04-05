@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  header, footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .main {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  section {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+  }
+  

@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: .7fr 3fr; 
+    grid-template-rows: auto 1fr auto;
+    gap: 10px; 
+    height: 100vh;
+  }
+  
+  header, footer, aside, main {
+    padding: 20px;
+    background-color: lightgrey;
+  }
+  
+  header, footer {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+  
+
+  .sample{
+    font-size: small;
+    border-bottom: 2px solid gray;
+  }
