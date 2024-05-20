@@ -7,5 +7,5 @@ function findLargest(a, b, c) {
     return Math.max(a, b, c);
 }
 
-// Example usage:
-console.log(findLargest(5, 8, 3)); // Output: 8
+console.log(findLargest(5, 8, 3));
+

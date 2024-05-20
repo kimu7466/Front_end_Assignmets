@@ -10,4 +10,6 @@ function fibonacciSeries(limit) {
     return fib.slice(0, limit);
 }
 
-console.log("Fibonacci series up to 10:", fibonacciSeries(10)); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+console.log("Fibonacci series up to 10:", fibonacciSeries(10)); 
+
+

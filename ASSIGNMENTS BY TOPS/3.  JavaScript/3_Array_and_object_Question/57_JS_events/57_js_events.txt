@@ -1,48 +1,48 @@
 Q.57 how many type of JS Event? How to use it? 
 
-ans:-
+ans:->
 
 JavaScript events are actions or occurrences that happen in the browser, which can be triggered by the user or by the browser itself. There are many types of JavaScript events, and they can be categorized based on their context. Here are some of the most common types:
 
 1. Mouse Events: These are triggered by mouse actions.
-    - "click": Fired when an element is clicked.
-    - "dblclick": Fired when an element is double-clicked.
-    - "mousedown": Fired when a mouse button is pressed down.
-    - "mouseup": Fired when a mouse button is released.
-    - "mousemove": Fired when the mouse pointer is moving.
-    - "mouseover": Fired when the mouse pointer is over an element.
-    - "mouseout": Fired when the mouse pointer leaves an element.
-    - "mouseenter": Fired when the mouse pointer enters an element (does not bubble).
-    - "mouseleave": Fired when the mouse pointer leaves an element (does not bubble).
+    -> "click": Fired when an element is clicked.
+    -> "dblclick": Fired when an element is double->clicked.
+    -> "mousedown": Fired when a mouse button is pressed down.
+    -> "mouseup": Fired when a mouse button is released.
+    -> "mousemove": Fired when the mouse pointer is moving.
+    -> "mouseover": Fired when the mouse pointer is over an element.
+    -> "mouseout": Fired when the mouse pointer leaves an element.
+    -> "mouseenter": Fired when the mouse pointer enters an element (does not bubble).
+    -> "mouseleave": Fired when the mouse pointer leaves an element (does not bubble).
 
 2. Keyboard Events: These are triggered by keyboard actions.
-    - "keydown": Fired when a key is pressed down.
-    - "keyup": Fired when a key is released.
-    - "keypress": Fired when a key is pressed down and released.
+    -> "keydown": Fired when a key is pressed down.
+    -> "keyup": Fired when a key is released.
+    -> "keypress": Fired when a key is pressed down and released.
 
 3. Form Events: These are triggered by actions on form elements.
-    - "submit": Fired when a form is submitted.
-    - "change": Fired when the value of an input element changes.
-    - "focus": Fired when an element gains focus.
-    - "blur": Fired when an element loses focus.
-    - "input": Fired when the value of an "<input>", "<textarea>", or "<select>" element is changed.
+    -> "submit": Fired when a form is submitted.
+    -> "change": Fired when the value of an input element changes.
+    -> "focus": Fired when an element gains focus.
+    -> "blur": Fired when an element loses focus.
+    -> "input": Fired when the value of an "<input>", "<textarea>", or "<select>" element is changed.
 
 4. Window Events: These are triggered by actions on the window object.
-    - "load": Fired when the whole page has loaded.
-    - "unload": Fired when the page is unloaded.
-    - "resize": Fired when the window is resized.
-    - "scroll": Fired when the window is scrolled.
+    -> "load": Fired when the whole page has loaded.
+    -> "unload": Fired when the page is unloaded.
+    -> "resize": Fired when the window is resized.
+    -> "scroll": Fired when the window is scrolled.
 
 5. Touch Events: These are triggered by touch actions on touch screen devices.
-    - "touchstart": Fired when a finger is placed on the touch surface.
-    - "touchmove": Fired when a finger is moved along the touch surface.
-    - "touchend": Fired when a finger is removed from the touch surface.
-    - "touchcancel": Fired when a touch event is interrupted.
+    -> "touchstart": Fired when a finger is placed on the touch surface.
+    -> "touchmove": Fired when a finger is moved along the touch surface.
+    -> "touchend": Fired when a finger is removed from the touch surface.
+    -> "touchcancel": Fired when a touch event is interrupted.
 
 6. Clipboard Events: These are triggered by actions related to the clipboard.
-    - "copy": Fired when content is copied to the clipboard.
-    - "cut": Fired when content is cut to the clipboard.
-    - "paste": Fired when content is pasted from the clipboard.
+    -> "copy": Fired when content is copied to the clipboard.
+    -> "cut": Fired when content is cut to the clipboard.
+    -> "paste": Fired when content is pasted from the clipboard.
 
 ### How to Use Events
 
@@ -140,15 +140,15 @@ html
 ### Explanation:
 
 1. Mouse Event:
-    - A button with an "id" of "clickButton" listens for a "click" event. When the button is clicked, a message is displayed.
+    -> A button with an "id" of "clickButton" listens for a "click" event. When the button is clicked, a message is displayed.
 
 2. Keyboard Event:
-    - An input field with an "id" of "nameInput" listens for a "keydown" event. When a key is pressed, the key name is displayed.
+    -> An input field with an "id" of "nameInput" listens for a "keydown" event. When a key is pressed, the key name is displayed.
 
 3. Form Event:
-    - A form with an "id" of "myForm" listens for a "submit" event. When the form is submitted, it prevents the default submission behavior, retrieves the email value, and displays it.
+    -> A form with an "id" of "myForm" listens for a "submit" event. When the form is submitted, it prevents the default submission behavior, retrieves the email value, and displays it.
 
 4. Window Event:
-    - The window listens for a "resize" event. When the window is resized, a message is displayed.
+    -> The window listens for a "resize" event. When the window is resized, a message is displayed.
 
 By using event listeners, you can create interactive and dynamic web applications.

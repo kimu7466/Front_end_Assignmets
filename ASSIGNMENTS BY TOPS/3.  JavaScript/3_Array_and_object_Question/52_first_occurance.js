@@ -5,4 +5,5 @@
 const str = "30 Days Of JavaScript";
 const position = str.indexOf('a');
 
-console.log(position); // Output: 3
+console.log(position); 
+

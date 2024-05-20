@@ -14,4 +14,4 @@ function factorial(n) {
     return result;
 }
 let n = 5
-console.log(`Factorial of ${n}: `, factorial(n)); // Output: 120
+console.log(`Factorial of ${n}: `, factorial(n));

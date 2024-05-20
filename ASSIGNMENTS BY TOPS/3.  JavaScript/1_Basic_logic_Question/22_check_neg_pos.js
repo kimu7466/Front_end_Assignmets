@@ -13,7 +13,7 @@ function checkNumberSign(num) {
     }
 }
 
-// Example usage:
-console.log(checkNumberSign(5)); // Output: "Positive"
-console.log(checkNumberSign(-5)); // Output: "Negative"
-console.log(checkNumberSign(0)); // Output: "Zero"
+
+console.log(checkNumberSign(5)); 
+console.log(checkNumberSign(-5));
+console.log(checkNumberSign(0)); 

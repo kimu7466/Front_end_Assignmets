@@ -17,4 +17,4 @@ for (let i = 0; i < 5; i++) {
     console.log(i);
 }
 
-// This loop will print numbers from 0 to 4 to the console.
+

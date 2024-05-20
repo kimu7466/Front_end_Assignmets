@@ -8,6 +8,6 @@ function isVowel(char) {
     return ['a', 'e', 'i', 'o', 'u'].includes(char);
 }
 
-// Example usage:
-console.log(isVowel('A')); // Output: true
-console.log(isVowel('b')); // Output: false
+
+console.log(isVowel('A'));
+console.log(isVowel('b'));

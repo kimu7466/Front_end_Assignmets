@@ -72,28 +72,28 @@ The Document Object Model (DOM) is a programming interface for web documents. It
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 2. Element Access:
-    - "getElementById":
+    -> "getElementById":
         javascript
         >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         // Example: Getting an element by ID
 
         const element = document.getElementById('myElement');
         >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    - "getElementsByClassName":
+    -> "getElementsByClassName":
         javascript
         >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         // Example: Getting elements by class name
 
         const elements = document.getElementsByClassName('myClass');
         >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    - "getElementsByTagName":
+    -> "getElementsByTagName":
         javascript
         >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         // Example: Getting elements by tag name
 
         const elements = document.getElementsByTagName('div');
         >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    - "querySelector" and "querySelectorAll":
+    -> "querySelector" and "querySelectorAll":
         javascript
         >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         // Example: Using querySelector
@@ -105,7 +105,7 @@ The Document Object Model (DOM) is a programming interface for web documents. It
         >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 3. Modifying Content:
-    - "innerHTML" and "textContent":
+    -> "innerHTML" and "textContent":
         javascript
         >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         // Example: Changing inner HTML
@@ -137,8 +137,8 @@ The Document Object Model (DOM) is a programming interface for web documents. It
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 === Summary
--  ===BOM: Deals with browser components other than the document, like history, location, navigator, and screen. It's focused on browser operations and control.
-- DOM: Deals with the document's content itself. It represents the structure of a webpage and allows manipulation of HTML and CSS.
+->  ===BOM: Deals with browser components other than the document, like history, location, navigator, and screen. It's focused on browser operations and control.
+-> DOM: Deals with the document's content itself. It represents the structure of a webpage and allows manipulation of HTML and CSS.
 
 Understanding both BOM and DOM is essential for effective web development, as they provide the tools necessary to interact with and manipulate the browser environment and webpage content dynamically.
 

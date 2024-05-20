@@ -5,4 +5,5 @@
 
 console.log(true && false || false && true);
 
-// Output: false
+
+

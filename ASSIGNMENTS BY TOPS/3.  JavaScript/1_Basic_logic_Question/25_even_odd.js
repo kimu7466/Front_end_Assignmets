@@ -6,6 +6,5 @@ function checkEvenOrOdd(num) {
     return num % 2 === 0 ? "Even" : "Odd";
 }
 
-// Example usage:
-console.log(checkEvenOrOdd(5)); // Output: "Odd"
-console.log(checkEvenOrOdd(8)); // Output: "Even"
+console.log(checkEvenOrOdd(5));
+console.log(checkEvenOrOdd(8));

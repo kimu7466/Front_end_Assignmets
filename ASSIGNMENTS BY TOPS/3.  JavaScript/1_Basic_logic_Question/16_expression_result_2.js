@@ -5,4 +5,3 @@
 
 console.log(true && 1 && "hello"); 
 
-// Output: "hello"

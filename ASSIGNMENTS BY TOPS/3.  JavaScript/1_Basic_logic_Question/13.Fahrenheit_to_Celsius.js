@@ -9,7 +9,6 @@ function fahrenheitToCelsius(fahrenheit) {
     return celsius;
 }
 
-// Example usage:
 const fahrenheit = 100;
 const celsius = fahrenheitToCelsius(fahrenheit);
 console.log(fahrenheit + " degrees Fahrenheit is equal to " + celsius + " degrees Celsius.");

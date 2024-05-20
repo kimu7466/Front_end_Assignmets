@@ -15,7 +15,7 @@ function sumFirstAndLastDigits(number) {
     return sum;
 }
 
-// Example usage:
+
 const number = 1234;
 const sum = sumFirstAndLastDigits(number);
 console.log("Sum of first and last digits of", number, "is:", sum);

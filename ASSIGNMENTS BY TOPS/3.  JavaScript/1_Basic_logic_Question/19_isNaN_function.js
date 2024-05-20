@@ -7,11 +7,9 @@
 
 
 
-// Perform a mathematical operation resulting in NaN
 let result = 0 / 0;
-console.log("Result:", result); // Output: NaN
+console.log("Result:", result); 
 
-// Check if a value is NaN
 let value = NaN;
 if (isNaN(value)) {
   console.log("The value is NaN");
