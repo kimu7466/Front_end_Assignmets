@@ -1,0 +1,134 @@
+<!-- Q.56 Dynamic Form Validation in JS?  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+        .valid {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <form id="validationForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error"></span><br>
+
+        <label for="number">Number (1-100):</label>
+        <input type="number" id="number" name="number">
+        <span id="numberError" class="error"></span><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="passwordError" class="error"></span><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('validationForm');
+    const emailInput = document.getElementById('email');
+    const numberInput = document.getElementById('number');
+    const passwordInput = document.getElementById('password');
+
+    emailInput.addEventListener('input', function () {
+        validateEmailField(emailInput);
+    });
+
+    numberInput.addEventListener('input', function () {
+        validateNumberField(numberInput);
+    });
+
+    passwordInput.addEventListener('input', function () {
+        validatePasswordField(passwordInput);
+    });
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const isEmailValid = validateEmailField(emailInput);
+        const isNumberValid = validateNumberField(numberInput);
+        const isPasswordValid = validatePasswordField(passwordInput);
+
+        if (isEmailValid && isNumberValid && isPasswordValid) {
+            alert('Form submitted successfully!');
+            // Proceed with form submission, e.g., send data to the server
+        }
+    });
+
+    function validateEmailField(input) {
+        const email = input.value;
+        const emailError = document.getElementById('emailError');
+        if (!validateEmail(email)) {
+            emailError.textContent = 'Invalid email address';
+            input.classList.add('error');
+            input.classList.remove('valid');
+            return false;
+        } else {
+            emailError.textContent = '';
+            input.classList.remove('error');
+            input.classList.add('valid');
+            return true;
+        }
+    }
+
+    function validateNumberField(input) {
+        const number = input.value;
+        const numberError = document.getElementById('numberError');
+        if (!validateNumber(number)) {
+            numberError.textContent = 'Number must be between 1 and 100';
+            input.classList.add('error');
+            input.classList.remove('valid');
+            return false;
+        } else {
+            numberError.textContent = '';
+            input.classList.remove('error');
+            input.classList.add('valid');
+            return true;
+        }
+    }
+
+    function validatePasswordField(input) {
+        const password = input.value;
+        const passwordError = document.getElementById('passwordError');
+        if (!validatePassword(password)) {
+            passwordError.textContent = 'Password must be at least 6 characters long and contain at least one number';
+            input.classList.add('error');
+            input.classList.remove('valid');
+            return false;
+        } else {
+            passwordError.textContent = '';
+            input.classList.remove('error');
+            input.classList.add('valid');
+            return true;
+        }
+    }
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    function validateNumber(number) {
+        const num = parseInt(number, 10);
+        return !isNaN(num) && num >= 1 && num <= 100;
+    }
+
+    function validatePassword(password) {
+        const re = /^(?=.*\d).{6,}$/;
+        return re.test(password);
+    }
+});
+
+    </script>
+</body>
+</html>

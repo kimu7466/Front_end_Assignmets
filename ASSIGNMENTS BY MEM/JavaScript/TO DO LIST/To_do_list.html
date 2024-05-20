@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List</title>
+<style>
+    *{
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    body {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .body {
+        display: flex;
+        place-content: center;
+        display: flex;
+        text-align: center;
+        padding: 10px;
+    }
+    .task_item {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    /* .completed {
+        text-decoration: line-through;
+    } */
+    .adding{
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+    .heading{
+        color: blue;
+    }
+    .input{
+        place-content: center;
+        width: 70%;
+    }
+    #task_input {
+        width: 90%;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid gray;
+        font-size: large;
+        border-radius: 10px;
+    }
+    #task_input:focus-visible{
+        outline: none;
+    }
+    .button{
+        place-content: center;
+    }
+    .btn{
+        padding: 13px 25px;
+        color: white;
+        background-color: green;
+        border: none;
+        border-radius: 5px ;
+    }
+    li{
+        display: flex   ;
+        background-color: aquamarine;
+        justify-content: space-between;
+        font-size: large;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+    }
+    .del_btn{
+        padding: 13px 25px;
+        color: white;
+        background-color: red;
+        border: none;
+        border-radius: 5px;
+    }
+
+</style>
+</head>
+
+    <div class="heading">
+        <h1>To-Do List</h1>
+    </div>
+    <hr>
+    <div class="body">
+        <div class="adding">
+            <div class="input">
+                <input type="text" id="task_input" placeholder="Add new task...">
+            </div>
+            <div class="button">
+                <button class="btn" onclick="add_task()">Add Task</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="list">
+        <ul id="task_list">
+        <li>
+
+            <div>
+                <input id="checkbox" type="checkbox" onchange="toggleTaskCompletion(this)">
+                 sample task 1 Lorem ipsum dolor sit amet consectetur 
+                
+            </div>
+            <div> <button class="del_btn" onclick="deleteTask(this)">Delete</button></div>
+        </li>
+        <li>
+
+            <div>
+                <input type="checkbox" onchange="toggleTaskCompletion(this)">
+                 sample task 1 Lorem ipsum dolor sit amet consectetur 
+                
+            </div>
+            <div> <button class="del_btn" onclick="deleteTask(this)">Delete</button></div>
+        </li>
+        <li>
+
+            <div>
+                <input type="checkbox" onchange="toggleTaskCompletion(this)">
+                 sample task 1 Lorem ipsum dolor sit amet consectetur 
+                
+            </div>
+            <div> <button class="del_btn" onclick="deleteTask(this)">Delete</button></div>
+        </li>
+        </ul>
+    </div>
+
+<script>
+    function add_task() {
+        var input = document.getElementById("task_input");
+        var taskText = input.value;
+        if (taskText.trim() !== "") {
+            var task_list = document.getElementById("task_list");
+            var listItem = document.createElement("li");
+            listItem.className = "task_item";
+            listItem.innerHTML = '<div><input type="checkbox" onchange="toggleTaskCompletion(this)">' + taskText + '</div><div> <button class="del_btn" onclick="deleteTask(this)">Delete</button></div>';
+            task_list.appendChild(listItem);
+            input.value = "";
+        } 
+        else {alert("Please enter a task.");}}
+
+    function toggleTaskCompletion(checkbox) {
+        var taskText = checkbox.nextSibling;
+        if (checkbox.checked) {
+            taskText.classList.add("completed");
+        } else {
+            taskText.classList.remove("completed");
+        }
+    }
+
+    function deleteTask(button) {
+        var listItem = button.parentNode;
+        console.log(listItem);
+        listItem.parentNode.removeChild(listItem);
+    }
+</script>
+
+</body>
+</html>

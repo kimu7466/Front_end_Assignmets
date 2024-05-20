@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .slider {
+            display: flex;
+            margin: 100px;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            border: 1px solid black;
+            margin: 10px;
+            background-color: brown;
+            flex: 0 0 auto;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center; 
+        }
+        .hidden {
+            display: none;
+        }
+        .next, .prev{
+            padding: 10px 40px;
+            font-size: x-large;
+            /* margin: 30px; */
+            border: 1px solid gainsboro;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="slider">
+            <div class="slide"> 
+                <h1>slide1</h1>
+            </div>
+            <div class="slide">
+                <h1>slide2</h1>
+            </div>
+            <div class="slide">
+                <h1>slide3</h1>
+            </div>
+            <div class="slide">
+                <h1>slide4</h1>
+            </div>
+            <div class="slide">
+                <h1>slide5</h1>
+            </div>
+            <div class="slide">
+                <h1>slide6</h1>
+            </div>
+            <div class="slide">
+                <h1>slide7</h1>
+            </div>
+            <div class="slide">
+                <h1>slide8</h1>
+            </div>
+            <div class="slide">
+                <h1>slide9</h1>
+            </div>
+        </div>
+        <div class="nav-buttons"> 
+            <button class="prev" onclick="previousSlide()"><</button>
+            <button class="next" onclick="nextSlide()">></button>
+        </div>
+    </div>
+<script>
+    let slides = document.querySelectorAll(".slide");
+    let currentIndex = 0;
+
+    function updateSlides() {
+        slides.forEach((slide, index) => {
+            slide.classList.add('hidden');
+            if (index >= currentIndex && index < currentIndex + 5) {
+                slide.classList.remove('hidden');
+            }
+        });
+    }
+
+    function nextSlide() {
+        if (currentIndex + 5 < slides.length) {
+            currentIndex++;
+            updateSlides();
+        }
+    }
+
+    function previousSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlides();
+        }
+    }
+
+    updateSlides();
+</script>
+</body>
+</html>

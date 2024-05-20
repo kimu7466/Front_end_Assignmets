@@ -1,0 +1,154 @@
+Q.57 how many type of JS Event? How to use it? 
+
+ans:-
+
+JavaScript events are actions or occurrences that happen in the browser, which can be triggered by the user or by the browser itself. There are many types of JavaScript events, and they can be categorized based on their context. Here are some of the most common types:
+
+1. Mouse Events: These are triggered by mouse actions.
+    - "click": Fired when an element is clicked.
+    - "dblclick": Fired when an element is double-clicked.
+    - "mousedown": Fired when a mouse button is pressed down.
+    - "mouseup": Fired when a mouse button is released.
+    - "mousemove": Fired when the mouse pointer is moving.
+    - "mouseover": Fired when the mouse pointer is over an element.
+    - "mouseout": Fired when the mouse pointer leaves an element.
+    - "mouseenter": Fired when the mouse pointer enters an element (does not bubble).
+    - "mouseleave": Fired when the mouse pointer leaves an element (does not bubble).
+
+2. Keyboard Events: These are triggered by keyboard actions.
+    - "keydown": Fired when a key is pressed down.
+    - "keyup": Fired when a key is released.
+    - "keypress": Fired when a key is pressed down and released.
+
+3. Form Events: These are triggered by actions on form elements.
+    - "submit": Fired when a form is submitted.
+    - "change": Fired when the value of an input element changes.
+    - "focus": Fired when an element gains focus.
+    - "blur": Fired when an element loses focus.
+    - "input": Fired when the value of an "<input>", "<textarea>", or "<select>" element is changed.
+
+4. Window Events: These are triggered by actions on the window object.
+    - "load": Fired when the whole page has loaded.
+    - "unload": Fired when the page is unloaded.
+    - "resize": Fired when the window is resized.
+    - "scroll": Fired when the window is scrolled.
+
+5. Touch Events: These are triggered by touch actions on touch screen devices.
+    - "touchstart": Fired when a finger is placed on the touch surface.
+    - "touchmove": Fired when a finger is moved along the touch surface.
+    - "touchend": Fired when a finger is removed from the touch surface.
+    - "touchcancel": Fired when a touch event is interrupted.
+
+6. Clipboard Events: These are triggered by actions related to the clipboard.
+    - "copy": Fired when content is copied to the clipboard.
+    - "cut": Fired when content is cut to the clipboard.
+    - "paste": Fired when content is pasted from the clipboard.
+
+### How to Use Events
+
+To use events in JavaScript, you typically add event listeners to HTML elements. You can do this in several ways:
+
+1. Inline Event Handlers: Adding an event handler directly to an HTML element.
+    html
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    <button onclick="alert('Button clicked!')">Click Me</button>
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+2. Event Handler Properties: Assigning an event handler to an element's property in JavaScript.
+    html
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    <button id="myButton">Click Me</button>
+    <script>
+        document.getElementById('myButton').onclick = function() {
+            alert('Button clicked!');
+        };
+    </script>
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+3. addEventListener: Using "addEventListener" to attach an event handler to an element. This is the preferred method as it allows multiple handlers for the same event and provides better separation of HTML and JavaScript.
+    html
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    <button id="myButton">Click Me</button>
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            alert('Button clicked!');
+        });
+    </script>
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+### Example: Using Various Events
+
+Here's an example demonstrating different types of events:
+
+html
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Example</title>
+</head>
+<body>
+    <h1>JavaScript Events Example</h1>
+
+    <!-- Mouse Event -->
+    <button id="clickButton">Click Me</button>
+    <p id="clickMessage"></p>
+
+    <!-- Keyboard Event -->
+    <input type="text" id="nameInput" placeholder="Type your name">
+    <p id="nameMessage"></p>
+
+    <!-- Form Event -->
+    <form id="myForm">
+        <input type="email" id="emailInput" placeholder="Enter your email">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="formMessage"></p>
+
+    <!-- Window Event -->
+    <p id="resizeMessage">Resize the window to see a message.</p>
+
+    <script>
+        // Mouse Event
+        document.getElementById('clickButton').addEventListener('click', function() {
+            document.getElementById('clickMessage').textContent = 'Button was clicked!';
+        });
+
+        // Keyboard Event
+        document.getElementById('nameInput').addEventListener('keydown', function(event) {
+            document.getElementById('nameMessage').textContent = "You pressed: ${event.key}";
+        });
+
+        // Form Event
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            const email = document.getElementById('emailInput').value;
+            document.getElementById('formMessage').textContent = "Email submitted: ${email}";
+        });
+
+        // Window Event
+        window.addEventListener('resize', function() {
+            document.getElementById('resizeMessage').textContent = 'The window was resized!';
+        });
+    </script>
+</body>
+</html>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+### Explanation:
+
+1. Mouse Event:
+    - A button with an "id" of "clickButton" listens for a "click" event. When the button is clicked, a message is displayed.
+
+2. Keyboard Event:
+    - An input field with an "id" of "nameInput" listens for a "keydown" event. When a key is pressed, the key name is displayed.
+
+3. Form Event:
+    - A form with an "id" of "myForm" listens for a "submit" event. When the form is submitted, it prevents the default submission behavior, retrieves the email value, and displays it.
+
+4. Window Event:
+    - The window listens for a "resize" event. When the window is resized, a message is displayed.
+
+By using event listeners, you can create interactive and dynamic web applications.

@@ -1,0 +1,92 @@
+<!-- Q.55 Form in Email, number, Password, Validation? -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form id="validationForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error"></span><br>
+
+        <label for="number">Number (1-100):</label>
+        <input type="number" id="number" name="number">
+        <span id="numberError" class="error"></span><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="passwordError" class="error"></span><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+    document.getElementById('validationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    clearErrors();
+
+    const email = document.getElementById('email').value;
+    const number = document.getElementById('number').value;
+    const password = document.getElementById('password').value;
+
+    let isValid = true;
+
+    if (!validateEmail(email)) {
+        showError('emailError', 'Invalid email address');
+        isValid = false;
+    }
+
+    if (!validateNumber(number)) {
+        showError('numberError', 'Number must be between 1 and 100');
+        isValid = false;
+    }
+
+    if (!validatePassword(password)) {
+        showError('passwordError', 'Password must be at least 6 characters long and contain at least one number');
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert('Form submitted successfully!');
+    }
+});
+
+function showError(elementId, message) {
+    const errorElement = document.getElementById(elementId);
+    errorElement.textContent = message;
+}
+
+function clearErrors() {
+    const errors = document.querySelectorAll('.error');
+    errors.forEach(error => {
+        error.textContent = '';
+    });
+}
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+function validateNumber(number) {
+    const num = parseInt(number, 10);
+    return !isNaN(num) && num >= 1 && num <= 100;
+}
+
+function validatePassword(password) {
+    const re = /^(?=.*\d).{6,}$/;
+    return re.test(password);
+}
+    </script>
+</body>
+</html>
