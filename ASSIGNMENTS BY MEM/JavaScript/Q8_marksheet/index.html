@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minimum number</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h2>Marksheet for Information Technology </h2>
+        </div>
+        <div class="row">
+            <h4 style="width: 100%; text-align: center;">Enter Marks</h4>
+        </div>
+
+        <div class="row">
+            <label>1. C Language</label>
+            <input type="number" id="clang">
+            <label class="message">invalid marks</label>
+        </div>
+        <div class="row">
+            <label>2. C++ Language</label>
+            <input type="number" id="cpp">
+            <label class="message">invalid marks</label>
+        </div>
+        <div class="row">
+            <label>3. Database</label>
+            <input type="number" id="dbms">
+            <label class="message">invalid marks</label>
+        </div>
+        <div class="row">
+            <label>4. HTML</label>
+            <input type="number" id="html">
+            <label class="message">invalid marks</label>
+        </div>
+        <div class="row">
+            <label>5. CSS</label>
+            <input type="number" id="css">
+            <label class="message">invalid marks</label>
+        </div>
+        <div class="row">
+            <label>6. php</label>
+            <input type="number" id="php">
+            <label class="message">invalid marks</label>
+        </div>
+        <div class="row">
+            <label>7. Core jave</label>
+            <input type="number" id="java">
+            <label class="message">invalid marks</label>
+        </div>
+
+        
+        <div class="btn">
+            <button id="result">Result</button>
+        </div>
+        
+        <hr>
+        <div class="answer_div">
+            <div class="part">
+                <p>
+                    Total is : 
+                        <span class="answer" id="total_marks">
+                            000
+                        </span>
+                    /350
+                </p>
+            </div>
+
+            <div class="part">
+                <p>
+                    Percentage is :
+                    <span class="answer" id="percentage">
+                        00.00
+                    </span>
+                    %
+                </p>
+            </div>
+
+            <div class="part">
+                <p>
+                    You are :
+                    <span class="answer" id="bool">
+                        ____
+                    </span>
+                    
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
