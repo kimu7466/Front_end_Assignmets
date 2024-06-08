@@ -1,0 +1,47 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    margin: 10% auto;
+    place-content: center;
+    width: 600px;
+    height: 250px;
+    border: 1px solid black;
+    padding: 25px;
+}
+
+label{
+    width: 50%;
+}
+
+input[type="number"],select{
+    width: 50%;
+    height: 25px;
+}
+
+.row{
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+
+.answer_div{
+    display: flex;
+    padding: 10px;
+    /* justify-content: center; */
+}
+/* span{
+    width: 40%;
+    padding: 4px;
+    text-align: right;
+}*/
+
+.answer{
+    width: 60%;
+    color:red;
+    text-align: left;
+} 

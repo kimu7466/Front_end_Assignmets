@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container" id="marksheet">
+        <div class="heading">
+            <h2>Register Here</h2>
+        </div>
+
+        <div>
+            <div class="row">
+                <div class="label">
+                    <label>Firstname</label>
+                </div>
+                <div class="input">
+                    <input type="text" id="firstname">
+                </div>
+            </div>
+            <div class="msg_div">
+                <label class="message" id="firstname_msg"></label>
+            </div>
+        </div>
+      
+        <div>
+            <div class="row">
+                <div class="label">
+                    <label>Lastname</label>
+                </div>
+                <div class="input">
+                    <input type="text" id="lastname">
+                </div>
+            </div>
+            <div class="msg_div">
+                <label class="message" id="lastname_msg"></label>
+            </div>
+        </div>
+
+        <div>
+            <div class="row">
+                <div class="label">
+                    <label>Gender</label>
+                </div>
+                <div class="input">
+                    <input type="radio" name="gender" id="male" value="male"> <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female"> <label for="female">Female</label>
+                </div>
+            
+            </div>
+            <div class="msg_div">
+                <label class="message" id="gender_msg"></label>
+            </div>
+        </div>
+
+
+        <div>
+            <div class="row">
+                <div class="label">
+                    <label>Address</label>
+                </div>
+                <div class="input">
+                    <textarea name="address" id="address" placeholder="Enter character between 35 to 200"></textarea>
+                </div>
+            </div>
+            <div class="msg_div">
+                <label class="message" id="address_msg"></label>
+            </div>
+        </div>
+      
+
+        <div>
+            <div class="row">
+                <div class="label">
+                    <label>City</label>
+                </div>
+                <div class="input">
+                    <select name="City" id="city">
+                        <option value="">--select--</option>
+                        <option value="surat">surat</option>
+                        <option value="varodara">varodara</option>
+                        <option value="ahmedabad">ahmedabad</option>
+                        <option value="rajkot">rajkot</option>
+                        <option value="dahod">dahod</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="msg_div">
+                <label class="message" id="city_msg"></label>
+            </div>
+        </div>
+
+      
+        <div>
+            <div class="row">
+                <div class="label">
+                    <label>Mobile</label>
+                </div>
+                <div class="input">
+                    <input type="number" id="mobile" maxlength="10">
+                </div>
+            </div>
+            <div class="msg_div">
+                <label class="message" id="mobile_msg"></label>
+            </div>
+        </div>
+
+              
+        <div>
+            <div class="row">
+                <div class="label">
+                    <label>Email</label>
+                </div>
+                <div class="input">
+                    <input type="email" id="email" placeholder="abc@xyz.com">
+                </div>
+            </div>
+            <div class="msg_div">
+                <label class="message" id="email_msg"></label>
+            </div>
+        </div>
+
+        
+        <div>
+            <div class="row">
+
+                <div class="label">
+                    <label>Password</label>
+                </div>
+
+                <div class="password">
+                    <input type="password" id="password" placeholder="Enter 8 to 15 character">
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                
+            </div>
+
+            <div class="msg_div">
+                <label class="message" id="password_msg"></label>
+            </div>
+
+        </div>
+
+
+        <div>
+            <div class="row">
+                <label>Confirm Password</label>
+                <div class="password">
+                    <input type="password" id="c_password">
+                <i class="fa-solid fa-eye"></i>
+                <!-- <i class="fa-solid fa-eye-slash"></i> -->
+                </div>
+            </div>
+            <div class="msg_div">
+                <label class="message" id="c_password_msg"></label>
+            </div>
+        </div>
+
+
+        <div>
+
+            <div class="input_row">
+                <div class="blank"> 
+                </div>
+
+                <div class="input_btn">
+                    <input type="submit" id="submit">
+                </div>
+            
+                <div class="final_msg_div">
+                    <label id="submit_msg"></label>
+                </div>
+            </div>
+
+        </div>
+    
+    </div>
+
+</body>
+</html>

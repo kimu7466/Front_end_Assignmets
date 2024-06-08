@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    margin: 20px auto;
+    width: 700px;
+    border: 1px solid black;
+    padding: 50px;
+}
+
+.heading {
+    text-align: left;        
+    padding: 10px;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.sub_row{
+    width: 100%;
+}
+
+input[type="submit"]{
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 10px 25px;
+    font-size: 20px;
+}
+
+.input{
+    width: 70%;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="email"],
+select,
+textarea{
+    width: 99%;
+    padding: 0 1%;
+    height: 30px;
+}
+    
+input[type="password"]{
+    width: 93%;
+    height: 30px;
+    padding-left: 1%;
+    padding-right: 6%;
+}
+
+textarea{
+    height: 100px;
+}
+    
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+label{
+    width: 30%;
+    place-content: center;
+}
+
+.message {
+    width: 70%;
+    margin-left: 32%;
+    color: red;
+    display: none;
+}
+
+.label{
+    width: 30%;
+    place-content: center;
+}
+
+.password{
+    width: 70%;
+    position: relative;
+}
+
+.fa-solid{
+    position: absolute;
+    right: 5px;
+    top: 8px;
+}
+
+.msg_div{
+    width: 100%;
+}
+
+
+
+.input_row{
+    width: 100%;
+    display: flex;
+}
+
+.input_row .blank{
+    height: 20px;
+    width: 30%;
+}
+.input_btn{
+    width:20%;
+    margin-left: 9px;
+}
+
+.final_msg_div{
+    width: 50%;
+    place-content: center;
+    color: red;
+}
+
+#submit_msg{
+    width: 100%;
+}
+    

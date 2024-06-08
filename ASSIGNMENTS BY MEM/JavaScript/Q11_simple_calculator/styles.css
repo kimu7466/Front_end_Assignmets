@@ -1,0 +1,57 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    font-size: 21px;
+}
+
+.container {
+    margin: 10% auto;
+    place-content: center;
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+    padding: 25px;
+}
+
+.heading{
+    text-align: center;        
+    padding: 10px;
+    font-size: 23px;
+}
+ 
+.row{
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+
+button{
+    padding: 5px 20px;
+    margin: 10px;
+    font-size: xx-large;
+}
+
+.answer_div{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+span{
+    width: 40%;
+    padding: 4px;
+    text-align: right;
+}
+
+.answer{
+    width: 60%;
+    color:blue;
+    text-align: left;
+}

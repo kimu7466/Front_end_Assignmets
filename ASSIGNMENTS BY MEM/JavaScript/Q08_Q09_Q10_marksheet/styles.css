@@ -32,8 +32,27 @@ input[type="number"]{
     width: 40%;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .message{
     text-align: center;
+    color: red;
+}
+ 
+.btn_row{
+    width: 100%;
+    display: flex;
+}
+
+.blank{
+    width: 30%;
+}
+
+.sheet_msg{
     color: red;
 }
 
@@ -68,4 +87,13 @@ span{
     width: 60%;
     color:blue;
     text-align: left;
+}
+
+
+#download_pdf{
+    display: none;
+}
+
+#print_pdf{
+    display: none;
 }
