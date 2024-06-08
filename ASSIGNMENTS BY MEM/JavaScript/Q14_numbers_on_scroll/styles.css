@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body {
+  height: 2800px; /* to ensure there's enough content to scroll */
+  width: 100%;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/bdcb3b69213341.5b791e43d1b10.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.counter {
+  position: absolute;
+  bottom: -1600px;
+  right: left;
+  background-color: #f0f0f0;
+  padding: 10px;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  place-content: center;
+  font-size: xx-large;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
