@@ -1,0 +1,85 @@
+Q_2 How to embed audio and video in a webpage?
+
+ans :-
+
+Embedding audio and video in a webpage is straightforward with HTML5. You use the "<audio>" and "<video>" elements, respectively. Here are the basic steps and examples for both:
+
+=> Embedding Audio
+
+You can embed audio using the "<audio>" tag. You can include multiple sources to provide fallback options in different formats. Common audio formats include MP3, Ogg, and WAV.
+
+=> Example:
+=====HTML=====
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Audio</title>
+</head>
+<body>
+    <h1>Audio Example</h1>
+    <audio controls>
+        <source src="audio-file.mp3" type="audio/mpeg">
+        <source src="audio-file.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
+==============
+
+=> Embedding Video
+
+The "<video>" tag is used to embed video. You can also include multiple sources for fallback in different formats. Common video formats include MP4, WebM, and Ogg.
+
+=> Example:
+=====HTML=====
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Video</title>
+</head>
+<body>
+    <h1>Video Example</h1>
+    <video width="600" controls>
+        <source src="video-file.mp4" type="video/mp4">
+        <source src="video-file.webm" type="video/webm">
+        <source src="video-file.ogv" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
+==============
+
+=> Attributes for "<audio>" and "<video>" Tags
+
+- "controls": Adds play, pause, and volume controls.
+- "autoplay": The media starts playing as soon as it is loaded.
+- "loop": The media will start over again, every time it is finished.
+- "muted": The audio output of the media is muted.
+- "preload": Specifies if and how the author thinks the media file should be loaded when the page loads ("none", "metadata", or "auto").
+
+=> Example with All Attributes:
+
+=> Audio:
+=====HTML=====
+<audio controls autoplay loop muted>
+    <source src="audio-file.mp3" type="audio/mpeg">
+    <source src="audio-file.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+==============
+
+=> Video:
+=====HTML=====
+<video width="600" controls autoplay loop muted>
+    <source src="video-file.mp4" type="video/mp4">
+    <source src="video-file.webm" type="video/webm">
+    <source src="video-file.ogv" type="video/ogg">
+    Your browser does not support the video tag.
+</video>
+==============
+
+These tags provide a simple and effective way to include audio and video content directly in HTML5 web pages.

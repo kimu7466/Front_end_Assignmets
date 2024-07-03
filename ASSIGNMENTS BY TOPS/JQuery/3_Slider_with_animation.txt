@@ -1,0 +1,88 @@
+Q_3 How to create slider with animation?
+
+ans:- 
+
+Creating a slider with animation in jQuery involves using a combination of HTML, CSS, and jQuery code. Below is an example of a basic image slider with animation:
+
+=> HTML
+=====HMTL=====
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="image1.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="image2.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
+            <div class="slide"><img src="image4.jpg" alt="Image 4"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+==============
+
+=> CSS (styles.css)
+=====css======
+body {
+    font-family: Arial, sans-serif;
+}
+
+.slider {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+==============
+
+=> jQuery (script.js)
+=====javascript=====
+$(document).ready(function() {
+    let currentIndex = 0;
+    const slides = $('.slides');
+    const totalSlides = $('.slide').length;
+
+    function showNextSlide() {
+        currentIndex++;
+        if (currentIndex >= totalSlides) {
+            currentIndex = 0;
+        }
+        const newLeft = -currentIndex * 100 + '%';
+        slides.css('transform', 'translateX(' + newLeft + ')');
+    }
+
+    setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+});
+==============
+
+=> Explanation
+
+1. HTML: The HTML structure contains a ".slider" div which wraps around a ".slides" div. Inside ".slides", each ".slide" contains an image.
+2. CSS: The CSS styles ensure that the ".slider" has a fixed width, hides overflow content, and has a border and shadow. The ".slides" are displayed as a flexbox to align them horizontally, and each ".slide" takes up 100% of the slider width.
+3. jQuery: The jQuery script handles the sliding animation. It uses the "setInterval" function to change the slide every 3 seconds by updating the "transform" property of ".slides" to translate it horizontally based on the current index.
+
+This basic example can be enhanced with additional features such as navigation buttons, dot indicators, and touch/swipe functionality for a more robust slider experience.

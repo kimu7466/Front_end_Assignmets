@@ -1,0 +1,43 @@
+Q_1 What are the new tags added in HTML5?
+
+
+ans:-
+
+HTML5 introduced several new tags to enhance the semantics and functionality of web pages. Here are some of the notable new tags:
+
+=> Structural Elements
+1. <header>: Represents a container for introductory content or a set of navigational links.
+2. <nav>: Defines a set of navigation links.
+3. <section>: Represents a section of a document, typically with a heading.
+4. <article>: Specifies independent, self-contained content.
+5. <aside>: Defines content aside from the content it is placed in, often used for sidebars.
+6. <footer>: Represents a footer for its nearest sectioning content or sectioning root element.
+
+=> Media Elements
+1. <audio>: Used to embed sound content in documents.
+2. <video>: Used to embed video content in documents.
+3. <source>: Specifies multiple media resources for media elements (<audio> and <video>).
+4. <track>: Specifies text tracks for media elements (<audio> and <video>).
+
+=> Form Elements
+1. <datalist>: Contains a set of <option> elements that represent the permissible or suggested options available to other controls.
+2. <keygen>: Generates a key pair (public/private). (Note: Deprecated in HTML 5.2)
+3. <output>: Represents the result of a calculation or user action.
+
+=> Graphics Elements
+1. <canvas>: Used to draw graphics, on the fly, via scripting (usually JavaScript).
+2. <svg>: Defines vector-based graphics.
+
+=> Other Semantic Elements
+1. <figure>: Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+2. <figcaption>: Provides a caption for a <figure> element.
+3. <mark>: Represents text highlighted for reference purposes.
+4. <progress>: Represents the progress of a task.
+5. <meter>: Represents a scalar measurement within a known range, or a fractional value.
+6. <time>: Represents a specific period in time.
+7. <main>: Represents the main content of the document.
+8. <template>: Holds client-side content that you don’t want to be rendered when the page loads but can be instantiated later using JavaScript.
+9. <details>: Specifies additional details that the user can view or hide.
+10. <summary>: Defines a visible heading for the <details> element.
+
+These new elements help in creating a more structured and semantically rich HTML document, which is easier to understand and style with CSS, and more accessible for assistive technologies.

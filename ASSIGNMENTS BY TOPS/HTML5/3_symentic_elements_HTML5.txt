@@ -1,0 +1,144 @@
+Q_3 Semantic element in HTML5?
+
+ans:-
+
+Semantic elements in HTML5 are elements that clearly describe their meaning in a human- and machine-readable way. These elements provide better structure to the HTML document and make it easier for both developers and browsers to understand the content of the webpage. Here are some of the key semantic elements introduced in HTML5:
+
+=> Structural Elements
+1. "<header>": Represents introductory content or a set of navigational links.
+   =====HTML=====
+   <header>
+       <h1>Welcome to My Website</h1>
+       <nav>
+           <ul>
+               <li><a href="#home">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#contact">Contact</a></li>
+           </ul>
+       </nav>
+   </header>
+   ==============
+
+2. "<nav>": Defines a section of navigation links.
+   =====HTML=====
+   <nav>
+       <ul>
+           <li><a href="#home">Home</a></li>
+           <li><a href="#about">About</a></li>
+           <li><a href="#services">Services</a></li>
+           <li><a href="#contact">Contact</a></li>
+       </ul>
+   </nav>
+   ==============
+
+3. "<section>": Represents a standalone section of content, typically with a heading.
+   =====HTML=====
+   <section>
+       <h2>About Us</h2>
+       <p>We are a company dedicated to...</p>
+   </section>
+   ==============
+
+4. "<article>": Represents independent, self-contained content that can be distributed independently, such as a blog post or news article.
+   =====HTML=====
+   <article>
+       <h2>Breaking News</h2>
+       <p>The latest updates on...</p>
+   </article>
+   ==============
+
+5. "<aside>": Defines content aside from the main content, such as a sidebar.
+   =====HTML=====
+   <aside>
+       <h2>Related Articles</h2>
+       <ul>
+           <li><a href="#article1">Article 1</a></li>
+           <li><a href="#article2">Article 2</a></li>
+       </ul>
+   </aside>
+   ==============
+
+6. "<footer>": Represents a footer for its nearest sectioning content or sectioning root element, typically containing information about the author, copyright, or navigation links.
+   =====HTML=====
+   <footer>
+       <p>&copy; 2024 My Website</p>
+       <nav>
+           <ul>
+               <li><a href="#privacy">Privacy Policy</a></li>
+               <li><a href="#terms">Terms of Service</a></li>
+           </ul>
+       </nav>
+   </footer>
+   ==============
+
+=> Other Semantic Elements
+1. "<main>": Specifies the main content of the document, unique and central to the document's purpose.
+   =====HTML=====
+   <main>
+       <h1>Main Content</h1>
+       <p>This is the main section of the document...</p>
+   </main>
+   ==============
+
+2. "<figure>": Contains media content like images, illustrations, diagrams, code snippets, etc., along with their captions.
+   =====HTML=====
+   <figure>
+       <img src="image.jpg" alt="Description of image">
+       <figcaption>Caption describing the image.</figcaption>
+   </figure>
+   ==============
+
+3. "<figcaption>": Provides a caption for a "<figure>" element.
+   =====HTML=====
+   <figure>
+       <img src="image.jpg" alt="Description of image">
+       <figcaption>Caption describing the image.</figcaption>
+   </figure>
+   ==============
+
+4. "<mark>": Highlights text for reference purposes.
+   =====HTML=====
+   <p>This is an important <mark>highlighted</mark> section.</p>
+   ==============
+
+5. "<time>": Represents a specific period in time.
+   =====HTML=====
+   <p>Event starts at <time datetime="2024-07-03T14:00">2:00 PM</time>.</p>
+   ==============
+
+6. "<address>": Contains contact information for the nearest "<article>" or "<body>" ancestor.
+   =====HTML=====
+   <address>
+       <p>Contact us at:</p>
+       <p>123 Main St, Anytown, USA</p>
+       <p>Email: info@example.com</p>
+   </address>
+   ==============
+
+7. "<details>": Specifies additional details that the user can view or hide.
+   =====HTML=====
+   <details>
+       <summary>More Information</summary>
+       <p>This section provides additional details...</p>
+   </details>
+   ==============
+
+8. "<summary>": Defines a visible heading for the "<details>" element.
+   =====HTML=====
+   <details>
+       <summary>More Information</summary>
+       <p>This section provides additional details...</p>
+   </details>
+   ==============
+
+9. "<progress>": Represents the completion progress of a task.
+   =====HTML=====
+   <progress value="70" max="100">70%</progress>
+   ==============
+
+10. "<meter>": Represents a scalar measurement within a known range, or a fractional value.
+    =====HTML=====
+    <meter value="0.6">60%</meter>
+    ==============
+
+Using these semantic elements helps create a more accessible and well-structured web document, which benefits both users and search engines.

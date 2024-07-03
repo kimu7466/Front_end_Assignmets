@@ -1,0 +1,90 @@
+Q_4 Canvas and SVG tags.
+
+ans:-
+
+
+The "<canvas>" and "<svg>" tags in HTML5 are used to create and manipulate graphics on a web page. However, they serve different purposes and are used in different ways.
+
+=> "<canvas>" Element
+
+The "<canvas>" element is used for drawing graphics via scripting (usually JavaScript). It is a raster-based approach, meaning that it is resolution-dependent and operates more like a traditional bitmap image.
+
+=> Key Features:
+- Requires JavaScript to draw graphics.
+- Suitable for dynamic, high-performance graphics such as games, animations, and real-time visualizations.
+- Graphics are drawn pixel-by-pixel.
+
+=> Example:
+=====HTML=====
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Example</title>
+</head>
+<body>
+    <h1>Canvas Example</h1>
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid 000000;"></canvas>
+    
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+        // Draw a rectangle
+        context.fillStyle = 'red';
+        context.fillRect(20, 20, 150, 100);
+        // Draw a circle
+        context.beginPath();
+        context.arc(200, 200, 50, 0, 2 * Math.PI);
+        context.stroke();
+    </script>
+</body>
+</html>
+==============
+
+=> "<svg>" Element
+
+The "<svg>" (Scalable Vector Graphics) element is used to define vector-based graphics. SVG is resolution-independent, meaning that graphics are scalable and will not lose quality when resized.
+
+=> Key Features:
+- Uses XML to define graphics.
+- Suitable for static images and graphics that need to scale cleanly.
+- Allows for easy manipulation and interaction via CSS and JavaScript.
+- Graphics are defined using paths, shapes, and text elements.
+
+=> Example:
+=====HTML=====
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Example</title>
+</head>
+<body>
+    <h1>SVG Example</h1>
+    <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+        <!-- Draw a rectangle -->
+        <rect x="20" y="20" width="150" height="100" fill="red"/>
+        <!-- Draw a circle -->
+        <circle cx="200" cy="200" r="50" stroke="black" stroke-width="3" fill="blue"/>
+        <!-- Draw a line -->
+        <line x1="0" y1="0" x2="400" y2="400" stroke="green" stroke-width="2"/>
+        <!-- Draw text -->
+        <text x="200" y="50" font-family="Verdana" font-size="24" fill="black">Hello SVG</text>
+    </svg>
+</body>
+</html>
+==============
+
+=> Comparison
+_____________________________________________________________________________________________________________________________________
+| Feature        | "<canvas>"                                       | "<svg>"                                                       |
+|----------------|--------------------------------------------------|---------------------------------------------------------------|
+| Type           | Raster graphics                                  | Vector graphics                                               |
+| Resolution     | Resolution-dependent                             | Resolution-independent                                        |
+| Scripting      | Requires JavaScript for drawing                  | Defined using XML; can be manipulated with CSS and JavaScript |
+| Performance    | High performance for dynamic, real-time graphics | Best for static, high-quality, scalable graphics              |
+| Use Cases      | Games, animations, real-time visualizations      | Diagrams, icons, scalable graphics, interactive charts        |
+|________________|__________________________________________________|_______________________________________________________________|
+Both "<canvas>" and "<svg>" are powerful tools for web developers, and the choice between them depends on the specific requirements of the project.

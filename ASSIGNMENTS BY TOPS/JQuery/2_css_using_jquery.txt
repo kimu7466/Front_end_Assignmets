@@ -1,0 +1,41 @@
+Q_2 How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery , JQuery Animation?
+
+ans:-
+
+jQuery is a fast, small, and feature-rich JavaScript library. It simplifies things like HTML document traversal and manipulation, event handling, animation, and Ajax with an easy-to-use API that works across a multitude of browsers. Here are some key features and uses of jQuery:
+
+1. DOM Manipulation: jQuery makes it easy to select and manipulate HTML elements and their attributes.
+2. Event Handling: jQuery provides a straightforward way to handle events such as clicks, form submissions, and mouse movements.
+3. AJAX Support: jQuery simplifies making asynchronous HTTP requests to update web pages without reloading them.
+4. Animations and Effects: jQuery includes a variety of built-in methods for creating animations and effects.
+5. Cross-Browser Compatibility: jQuery handles the differences between browsers, allowing developers to write code that works consistently across all major browsers.
+6. Plugins: jQuery has a rich ecosystem of plugins that extend its functionality.
+
+Example usage of jQuery:
+
+=====HTML=====
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("p").hide();
+      });
+    });
+  </script>
+</head>
+<body>
+
+<button>Click me to hide paragraphs</button>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+</body>
+</html>
+==============
+
+In this example, jQuery is used to hide all paragraphs when the button is clicked. The "$" function is shorthand for "jQuery", and "$(document).ready" ensures that the code runs after the document is fully loaded.
