@@ -1,0 +1,78 @@
+<!-- Sum the properties There is a salaries object with arbitrary number of salaries. Write 
+the function sumSalaries(salaries) that returns the sum of all salaries using 
+Object.values and the for..of loop.If salaries is empty, then the result must be 0. 
+let salaries = { 
+"John": 100, 
+"Pete": 300, 
+"Mary": 250 
+}; 
+alert( sumSalaries(salaries) ); // 650 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Salaries</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sum Salaries</h1>
+        <button onclick="calculateSalaries()">Calculate Total Salaries</button>
+    </div>
+
+    <script>
+        function sumSalaries(salaries) {
+            let total = 0;
+            for (let salary of Object.values(salaries)) {
+                total += salary;
+            }
+            return total;
+        }
+
+        function calculateSalaries() {
+            let salaries = {
+                "John": 100,
+                "Pete": 300,
+                "Mary": 250
+            };
+            alert(sumSalaries(salaries)); // Displays: 650
+        }
+    </script>
+
+</body>
+</html>

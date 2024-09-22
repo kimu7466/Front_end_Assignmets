@@ -1,0 +1,81 @@
+<!-- Map to objects 
+let john = { name: "John", surname: "Smith", id: 1 }; let pete = { name: "Pete", 
+surname: "Hunt", id: 2 }; let mary = { name: "Mary", surname: "Key", id: 3 }; let 
+users = [ john, pete, mary ]; let usersMapped = /* ... your code ... */ 
+ 
+/* 
+usersMapped = [ 
+{ fullName: "John Smith", id: 1 }, 
+{ fullName: "Pete Hunt", id: 2 }, 
+{ fullName: "Mary Key", id: 3 } 
+] 
+*/ alert( usersMapped[0].id ) // 1 alert( usersMapped[0].fullName ) // John Smith -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map to Objects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Map to Objects</h1>
+        <button onclick="showUserMapped()">Show User Mapped</button>
+    </div>
+
+    <script>
+        let john = { name: "John", surname: "Smith", id: 1 };
+        let pete = { name: "Pete", surname: "Hunt", id: 2 };
+        let mary = { name: "Mary", surname: "Key", id: 3 };
+        
+        let users = [john, pete, mary];
+
+        // Mapping users to the new structure
+        let usersMapped = users.map(user => ({
+            fullName: `${user.name} ${user.surname}`,
+            id: user.id
+        }));
+
+        function showUserMapped() {
+            alert(usersMapped[0].id); // Displays: 1
+            alert(usersMapped[0].fullName); // Displays: John Smith
+        }
+    </script>
+
+</body>
+</html>
