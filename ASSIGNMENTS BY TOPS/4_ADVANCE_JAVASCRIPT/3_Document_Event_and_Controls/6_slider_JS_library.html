@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick Slider Example</title>
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .slider {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .slider img {
+            height: 80vh;
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Image Slider</h2>
+    <div class="slider">
+        <div><img src="https://www.4pawsanimal.com/sites/default/files/Cat-Diagnostic-Imaging-Blog-Header-%25281%2529.png" alt="Image 1"></div>
+        <div><img src="https://media.istockphoto.com/id/1357557077/photo/black-cat-lying-down-on-a-sofa.jpg?s=612x612&w=0&k=20&c=Yygz3mTwmG_KauTaSP5V_IP42yM9bYLZ16oj_56vdAA=" alt="Image 2"></div>
+        <div><img src="https://img.freepik.com/premium-photo/abstract-background-with-cat-sunglasses-laying-sand-cute-orange-kitty-sea-beach-close-up-summer-vacation-modern-wallpaper-horizontal-illustration-banner-design-generative-ai_9209-12697.jpg" alt="Image 3"></div>
+        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSFzpEqZkSktxSk9bbg9RroWMprYo9uOpUlQ&s" alt="Image 4"></div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                dots: true,        // Show dots for navigation
+                infinite: true,    // Infinite looping
+                speed: 500,        // Transition speed
+                slidesToShow: 1,   // Number of slides to show
+                slidesToScroll: 1, // Number of slides to scroll
+                autoplay: true,     // Auto play
+                autoplaySpeed: 2000 // Delay between slides
+            });
+        });
+    </script>
+
+</body>
+</html>
