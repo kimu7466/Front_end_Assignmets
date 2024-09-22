@@ -1,0 +1,105 @@
+<!-- // The following function returns true if the parameter age is greater than 
+// 18. Otherwise it asks for a confirmation and returns its result: 
+// function 
+// checkAge(age) 
+// {  
+// if (age> 18) { return true; } 
+// else { 
+ 
+//  // ...return confirm (‘did parents allow you?');
+// } 
+// }  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Age Function</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Check Age</h1>
+        <label for="ageInput">Enter your age:</label>
+        <input type="number" id="ageInput" min="0" placeholder="Enter age">
+        <button onclick="checkAgeInput()">Check Age</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function checkAge(age) {
+            if (age > 18) {
+                return true;
+            } else {
+                return confirm('Did parents allow you?');
+            }
+        }
+
+        function checkAgeInput() {
+            const age = document.getElementById('ageInput').value;
+            const result = checkAge(age);
+            const resultDiv = document.getElementById('result');
+            
+            if (result) {
+                resultDiv.textContent = "Access granted.";
+                resultDiv.style.color = "green";
+            } else {
+                resultDiv.textContent = "Access denied.";
+                resultDiv.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+Q :- Will alert be shown? 
+if ("0") { alert( 'Hello'); }
+
+
+ans :-
+
+Yes, the alert('Hello') will be shown.
+
+Explanation:
+- The condition inside the if statement is "0", which is a non-empty string.
+- In JavaScript, any non-empty string is considered truthy, meaning it will evaluate to true when used in a conditional statement.
+- Therefore, since "0" is truthy, the code inside the if block will execute, and the alert('Hello') will be shown.

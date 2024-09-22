@@ -1,0 +1,15 @@
+What is the code below going to output? alert( null || 2 || undefined );
+
+ans :-
+
+The code alert( null || 2 || undefined ); will output:- 2
+
+Explanation:-
+
+The || (logical OR) operator in JavaScript returns the first truthy value it encounters, or the last value if none are truthy. Here's how it evaluates in this case:
+
+1. null is falsy.
+2. 2 is truthy.
+3. Since 2 is truthy, the evaluation stops there, and 2 is returned.
+
+Thus, the alert will display 2.

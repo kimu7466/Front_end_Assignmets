@@ -1,0 +1,42 @@
+What will be the result for these expressions? 
+1. 5 > 4 
+2. "apple" > "pineapple" 
+3. "2" > "12" 
+4.  undefined == null 
+5.  undefined === null 
+6. null == "\n0\n" 
+7. 7. null === +"\n0\n"
+
+
+ans:-
+
+
+Here are the results for each of the given expressions:
+
+1. 5 > 4  
+   Result: true  
+   Explanation: 5 is greater than 4, so this returns true.
+
+2. "apple" > "pineapple"  
+   Result: false  
+   Explanation: String comparison is done lexicographically. Since "a" comes before "p", "apple" is not greater than "pineapple", so it returns false.
+
+3. "2" > "12"  
+   Result: true  
+   Explanation: Strings are compared lexicographically. "2" is greater than "12" because in a character-by-character comparison, "2" is greater than "1" (since "2" comes after "1").
+
+4. undefined == null  
+   Result: true  
+   Explanation: In JavaScript, undefined and null are considered equal when using == because they are both considered "empty" values.
+
+5. undefined === null  
+   Result: false  
+   Explanation: The strict equality operator === checks both value and type. Since undefined and null are of different types, this returns false.
+
+6. null == "\n0\n"  
+   Result: false  
+   Explanation: null only loosely equals undefined, and does not loosely equal any other value, so this returns false.
+
+7. null === +"\n0\n"  
+   Result: false  
+   Explanation: +"\n0\n" converts to the number 0, and null is not strictly equal to 0, so this returns false.

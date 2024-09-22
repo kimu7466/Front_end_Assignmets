@@ -1,0 +1,77 @@
+<!-- Replace Function Expressions with arrow functions in the code below: 
+Function 
+ask(question, yes, no) 
+{ if (confirm(question))yes(); 
+    else 
+    no(); 
+    } 
+    ask("Do you agree?", function() 
+    { alert("You agreed."); }, 
+    function() { 
+    alert("You canceled the execution."); } 
+    } -->
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ask Confirmation</h1>
+        <button onclick="askConfirmation()">Click to Confirm</button>
+    </div>
+
+    <script>
+        function ask(question, yes, no) {
+            if (confirm(question)) yes();
+            else no();
+        }
+
+        function askConfirmation() {
+            ask(
+                "Do you agree?",
+                () => alert("You agreed."),
+                () => alert("You canceled the execution.")
+            );
+        }
+    </script>
+
+</body>
+</html>
