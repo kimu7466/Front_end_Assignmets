@@ -1,30 +1,27 @@
 // Write a program of promises and handle that promises also
 
-// Function that returns a promise
 function fetchDataFromServer(success) {
     return new Promise((resolve, reject) => {
       console.log("Fetching data...");
   
-      // Simulate a delay (e.g., API call)
       setTimeout(() => {
         if (success) {
           resolve("Data fetched successfully!");
         } else {
           reject("Failed to fetch data from the server.");
         }
-      }, 2000); // 2 seconds delay
+      }, 2000); 
     });
   }
-  
-  // Handling the promise
-  fetchDataFromServer(true) // Pass true to simulate a successful operation
+    
+  fetchDataFromServer(true) 
     .then((response) => {
-      console.log(response); // Output: Data fetched successfully!
+      console.log(response); 
     })
     .catch((error) => {
-      console.error(error); // Output if the promise is rejected: Failed to fetch data from the server.
+      console.error(error); 
     })
     .finally(() => {
-      console.log("Operation complete."); // Output: Operation complete. (executes regardless of success or failure)
+      console.log("Operation complete."); 
     });
   
