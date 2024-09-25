@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Subtotal</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Shopping Cart</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Info</th>
+                <th>Quantity</th>
+                <th>Price (per unit)</th>
+                <th>Price (subtotal)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fortunata Window Hardware - Decorative Holdbacks - Mocha</td>
+                <td><input type="number" value="2" min="1" class="quantity" onkeyup="calculateSubtotal(this)"></td>
+                <td>₹<span class="price">29.99</span></td>
+                <td>₹<span class="subtotal">59.98</span></td>
+                <td><button class="btn" onclick="removeItem(this)">Remove</button></td>
+            </tr>
+            <tr>
+                <td>Woven Trellis Window Hardware - Clip Rings - Bronze</td>
+                <td><input type="number" value="1" min="1" class="quantity" onchange="calculateSubtotal(this)"></td>
+                <td>₹<span class="price">12.99</span></td>
+                <td>₹<span class="subtotal">12.99</span></td>
+                <td><button class="btn" onclick="removeItem(this)">Remove</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Total: ₹<span id="total">72.97</span></h3>
+
+    <script>
+        function calculateSubtotal(element) {
+            const row = element.closest('tr');
+            const price = parseFloat(row.querySelector('.price').textContent);
+            const quantity = parseInt(element.value);
+            const subtotal = price * quantity;
+
+            row.querySelector('.subtotal').textContent = subtotal.toFixed(2);
+
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            let total = 0;
+            const subtotals = document.querySelectorAll('.subtotal');
+            subtotals.forEach(sub => {
+                total += parseFloat(sub.textContent);
+            });
+
+            document.getElementById('total').textContent = total.toFixed(2);
+        }
+
+        function removeItem(element) {
+            const row = element.closest('tr');
+            row.remove();
+            calculateTotal();
+        }
+    </script>
+    
+</body>
+</html>
