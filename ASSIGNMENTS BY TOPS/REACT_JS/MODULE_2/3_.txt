@@ -1,0 +1,217 @@
+Q:- How to used JavaScript Events to do all examples? 
+
+ans:-
+
+JavaScript events are actions that occur in the browser, such as a user clicking a button, typing in a text field, or loading a page. Events allow you to execute JavaScript code when certain actions are triggered by the user or the browser.
+
+Here's how you can use JavaScript events to trigger the different output methods we discussed. Each example will use an event to display data.
+
+ 1. Using console.log() with a Button Click Event
+
+You can use the click event to log a message to the console when the button is clicked.
+
+>>>HTML<<<
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console Log Example</title>
+</head>
+<body>
+    <button onclick="logMessage()">Click me to log a message</button>
+
+    <script>
+        function logMessage() {
+            console.log("Button clicked! This message is logged in the console.");
+        }
+    </script>
+</body>
+</html>
+>>>>>><<<<<<
+- Event: Clicking the button triggers the logMessage() function to log a message to the console.
+
+---
+
+ 2. Using document.write() on Page Load Event
+
+You can use the load event to write content to the document as soon as the page is loaded.
+
+>>>HTML<<<
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Write Example</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            document.write("This message is written when the page loads.");
+        };
+    </script>
+</body>
+</html>
+>>>>>><<<<<<
+- Event: The window.onload event triggers document.write() when the page is fully loaded.
+
+---
+
+ 3. Using alert() with a Form Submit Event
+
+You can use the submit event of a form to trigger an alert box when the user submits the form.
+
+>>>HTML<<<
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Example</title>
+</head>
+<body>
+    <form onsubmit="showAlert(); return false;">
+        <input type="text" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function showAlert() {
+            alert("Form submitted!");
+        }
+    </script>
+</body>
+</html>
+>>>>>><<<<<<
+- Event: The form submission triggers the showAlert() function, which displays an alert.
+
+---
+
+ 4. Using innerHTML with a Button Click Event
+
+You can use a click event to change the content of an HTML element using innerHTML.
+
+>>>HTML<<<
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerHTML Example</title>
+</head>
+<body>
+    <div id="content">Click the button to change this content.</div>
+    <button onclick="changeContent()">Change Content</button>
+
+    <script>
+        function changeContent() {
+            document.getElementById("content").innerHTML = "Content has been updated!";
+        }
+    </script>
+</body>
+</html>
+>>>>>><<<<<<
+- Event: The click event on the button triggers the changeContent() function, updating the content of the <div>.
+
+---
+
+ 5. Using window.print() with a Button Click Event
+
+You can use the click event to open the print dialog when the user clicks a button.
+
+>>>HTML<<<
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Example</title>
+</head>
+<body>
+    <button onclick="window.print()">Print this page</button>
+</body>
+</html>
+>>>>>><<<<<<
+- Event: Clicking the button triggers the window.print() method, opening the print dialog.
+
+---
+
+ 6. Using prompt() with a Button Click Event
+
+You can use the click event to prompt the user for input.
+
+>>>HTML<<<
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Example</title>
+</head>
+<body>
+    <button onclick="askName()">Enter your name</button>
+
+    <script>
+        function askName() {
+            var name = prompt("Please enter your name:");
+            if (name) {
+                console.log("Hello, " + name);
+            }
+        }
+    </script>
+</body>
+</html>
+>>>>>><<<<<<
+- Event: Clicking the button triggers the askName() function, which prompts the user for their name.
+
+---
+
+ 7. Using confirm() with a Button Click Event
+
+You can use the click event to show a confirmation dialog when the user clicks a button.
+
+>>>HTML<<<
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Example</title>
+</head>
+<body>
+    <button onclick="confirmAction()">Confirm Action</button>
+
+    <script>
+        function confirmAction() {
+            var result = confirm("Do you really want to proceed?");
+            if (result) {
+                alert("You chose to proceed!");
+            } else {
+                alert("You cancelled the action.");
+            }
+        }
+    </script>
+</body>
+</html>
+>>>>>><<<<<<
+- Event: Clicking the button triggers the confirmAction() function, which shows a confirmation dialog.
+
+---
+
+ Summary of JavaScript Events Used:
+| Event        | Description                                                   | Example                          |
+|--------------|---------------------------------------------------------------|----------------------------------|
+| click        | Triggered when an element (e.g., button) is clicked           | onclick="functionName()"         |
+| submit       | Triggered when a form is submitted                            | onsubmit="functionName()"        |
+| load         | Triggered when the page or element finishes loading           | window.onload = functionName     |
+
+ Example of Using Events in HTML:
+Events make JavaScript interactive by allowing you to tie actions (like clicks, form submissions, or page loads) to specific JavaScript functions.
