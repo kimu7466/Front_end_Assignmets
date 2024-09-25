@@ -1,0 +1,87 @@
+Q:- What is CLI command In React Js?
+
+ans :-
+
+In React.js, CLI commands (Command Line Interface commands) are used to interact with tools and manage your React projects efficiently from the terminal. These commands allow you to create, develop, build, and test React applications, among other tasks.
+
+Here are some key CLI commands you’ll encounter while working with React:
+
+ 1. Creating a React App:
+To quickly set up a new React project, you use the create-react-app tool, which is a boilerplate generator.
+
+- Command:
+  >>>bash<<<
+  npx create-react-app my-app
+  >>>>><<<<<
+  - npx runs the create-react-app package without installing it globally.
+  - my-app is the name of the project directory that will be created.
+
+ 2. Starting the Development Server:
+After creating the React app, you can start the development server to preview your app in the browser.
+
+- Command:
+  >>>bash<<<
+  npm start
+  >>>>><<<<<
+  - This starts a local development server, typically accessible at http://localhost:3000, and watches for file changes (automatic hot-reloading).
+
+ 3. Building the App for Production:
+When your app is ready for production, you can create an optimized, minified build.
+
+- Command:
+  >>>bash<<<
+  npm run build
+  >>>>><<<<<
+  - This creates a build folder with optimized JavaScript, CSS, and HTML files, which you can deploy to production.
+
+ 4. Running Tests:
+If you have set up tests in your React project, you can run them with the following command.
+
+- Command:
+  >>>bash<<<
+  npm test
+  >>>>><<<<<
+  - This runs all the tests in your project, using Jest by default (which comes bundled with create-react-app).
+
+ 5. Ejecting from Create React App (CRA):
+By default, create-react-app hides its configuration (like Webpack, Babel) to simplify development. However, you may want to access and modify these configurations for more control.
+
+- Command:
+  >>>bash<<<
+  npm run eject
+  >>>>><<<<<
+  - This exposes all the internal configurations (Webpack, Babel, etc.). Note: This is a one-way operation. Once you eject, you can’t go back without manually undoing the changes.
+
+ 6. Installing Dependencies:
+You can install additional libraries or packages required for your React project using NPM.
+
+- Command:
+  >>>bash<<<
+  npm install <package-name>
+  >>>>><<<<<
+  - Example:
+    >>>bash<<<
+    npm install axios
+    >>>>><<<<<
+
+ 7. Checking Out Available Scripts:
+To see what scripts are available for your project, you can check your package.json or use the following command:
+
+- Command:
+  >>>bash<<<
+  npm run
+  >>>>><<<<<
+
+This shows all available npm scripts (like start, build, test, etc.).
+
+---
+
+ Summary of Common React CLI Commands:
+- npx create-react-app my-app: Create a new React project.
+- npm start: Start the development server.
+- npm run build: Create a production build of your app.
+- npm test: Run tests.
+- npm run eject: Eject from create-react-app to customize configurations.
+- npm install <package-name>: Install a new dependency or package.
+
+These CLI commands simplify the development process and allow you to manage the project efficiently from the command line!

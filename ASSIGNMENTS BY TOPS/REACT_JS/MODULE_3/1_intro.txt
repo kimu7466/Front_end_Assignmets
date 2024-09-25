@@ -1,0 +1,24 @@
+Q:- What is React Js?
+
+ans :-
+
+React.js (or simply React) is a JavaScript library used for building user interfaces, particularly for single-page applications. It was developed by Facebook and is now maintained by Meta and the open-source community. Here's a quick breakdown of what React is all about:
+
+1. Component-Based Architecture: 
+   - React allows you to build complex UIs from small, reusable pieces of code called components. Each component can manage its own state and render based on the data passed to it.
+
+2. Virtual DOM: 
+   - React uses a lightweight copy of the actual DOM called the Virtual DOM. When the state of a component changes, React updates only the changed parts in the DOM efficiently, instead of reloading the entire page.
+
+3. JSX (JavaScript XML):
+   - React uses a syntax extension called JSX, which allows you to write HTML-like code inside your JavaScript. JSX makes it easier to visualize the UI components in code.
+
+4. Unidirectional Data Flow:
+   - React follows a one-way data flow, meaning data flows from parent to child components through props. This helps make the app predictable and easier to debug.
+
+5. React Hooks:
+   - React introduced Hooks (like `useState`, `useEffect`, etc.) which allow functional components to manage state and side effects, previously only possible with class-based components.
+
+React is widely used for web applications, and its popularity is due to its efficiency, modularity, and the vast ecosystem of libraries and tools that integrate with it.
+
+Since you're learning React to build a to-do list application, you'll be using components and state management to handle tasks efficiently!

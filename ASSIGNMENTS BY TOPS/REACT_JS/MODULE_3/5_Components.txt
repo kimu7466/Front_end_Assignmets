@@ -1,0 +1,76 @@
+Q:- What is Components in React Js?
+
+ans :- 
+
+In React, components are the building blocks of the user interface. They encapsulate a piece of UI and its logic, allowing developers to create reusable and modular code. Here are the main types of components in React:
+
+1. Functional Components:
+   - These are simple JavaScript functions that return JSX (JavaScript XML). They can accept props (inputs) and manage their internal state using React Hooks (like `useState` and `useEffect`).
+   - Example:
+     >>>javascript<<<
+     function Greeting(props) {
+       return <h1>Hello, {props.name}!</h1>;
+     }
+     >>>>><<<<<
+
+2. Class Components:
+   - These are ES6 classes that extend from `React.Component`. They have a `render` method that returns JSX. Class components can also manage state and lifecycle methods.
+   - Example:
+     >>>javascript<<<
+     class Greeting extends React.Component {
+       render() {
+         return <h1>Hello, {this.props.name}!</h1>;
+       }
+     }
+     >>>>><<<<<
+
+3. Stateful and Stateless Components:
+   - Stateful Components: Components that maintain their own state. Both functional and class components can be stateful.
+   - Stateless Components: Components that do not maintain any state. They simply receive props and render UI based on them.
+
+4. Higher-Order Components (HOCs):
+   - These are functions that take a component and return a new component. HOCs are used for code reuse and to enhance components with additional functionality.
+   - Example:
+     >>>javascript<<<
+     function withLogging(WrappedComponent) {
+       return class extends React.Component {
+         componentDidMount() {
+           console.log('Component mounted!');
+         }
+         render() {
+           return <WrappedComponent {...this.props} />;
+         }
+       };
+     }
+     >>>>><<<<<
+
+5. Controlled and Uncontrolled Components:
+   - Controlled Components: Form components that derive their value from React state. The component's state is the single source of truth.
+   - Uncontrolled Components: Form components that manage their own state internally and use refs to access the value.
+
+ Why Use Components?
+- Reusability: Components can be reused throughout the application, reducing code duplication.
+- Separation of Concerns: Different parts of the UI can be managed separately, making the code more maintainable.
+- Composition: Smaller components can be combined to build complex UIs, promoting a clean architecture.
+
+ Example of a Simple Component Structure:
+Here’s a simple example illustrating a functional component with state:
+
+>>>javascript<<<
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+>>>>><<<<<
+
+In this example, `Counter` is a functional component that maintains a state variable `count`. It displays the current count and provides a button to increment it.
